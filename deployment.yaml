@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubedemoapp-deployment
+  name: exam-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: kubedemoapp
+      app: exam
   template:
     metadata:
       labels:
-        app: kubedemoapp
+        app: exam
     spec:
       containers:
-        - name: kubedemoapp
-          image: mounika2662006/myapp:latest # use your Docker Hub image
+        - name: exam
+          image: mounika2662006/myapp:latest
           ports:
             - containerPort: 5000
